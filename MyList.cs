@@ -85,16 +85,23 @@ namespace Teltonika_Uzd {
 				return parent;
 			} else {
 				foreach (MyList a in mainList) {
-					return a.parentObject (name);
+					if (a != null) { return a; } else {
+						return a.parentObject (name);
+					}
 				}
-			} return null;
+			}
+			return null;
 		}
 		public int destinationIndex (string name) {
+			int indexr =0;
 			foreach (MyList a in mainList) {
 				if (a.displayName == name) {
+					indexr=mainList.IndexOf (a);
 					return mainList.IndexOf (a);
 				} else {
-					return a.destinationIndex (name);
+					if (indexr > 0) { return indexr; } else {
+						return a.destinationIndex (name);
+					}
 				}
 			}
 			return -1;
@@ -103,15 +110,29 @@ namespace Teltonika_Uzd {
 			foreach (MyList a in mainList) {
 				if (a.displayName == name) {
 					return a;
-				} else { return a.relocate (name); }
+				} else {
+					if (a != null) { return a; } else {
+						return a.relocate (name);
+					}
+				}
 			}
 			return null;
 		}
 		public int relocateIndex (string name) {
+			int indexr =0;
 			foreach (MyList a in mainList) {
 				if (a.displayName == name) {
+					 indexr=mainList.IndexOf (a);
 					return mainList.IndexOf (a);
-				} else { return a.relocateIndex (name); }
+				} else {
+					if (indexr>0) 
+					{ 
+						return indexr; 
+
+					} else {
+						return a.relocateIndex (name);
+					}
+				}
 			}
 			return -1;
 		}
