@@ -107,10 +107,19 @@ namespace Teltonika_Uzd {
 					 
 				foreach (MyList a in mainList)
 				{
-					parentObject= a.parentObject(parsedLine[1]);
-					destIndex= a.destinationIndex(parsedLine[1]);
-					relocateObject= a.relocate(parsedLine[2]);
-					relocateIndex=a.relocateIndex(parsedLine[2]);
+
+					if (parentObject == null) {
+						parentObject = a.parentObject(parsedLine[1]);
+					}
+					if (destIndex == -1) {
+						destIndex = a.destinationIndex(parsedLine[1]);
+					} 
+					if (relocateObject == null) {
+						relocateObject = a.relocate(parsedLine[2]);
+					}
+					if (relocateIndex == -1) {
+						relocateIndex = a.relocateIndex(parsedLine[2]);
+					}
 				}
 				if(destIndex>0 &&relocateIndex>0){
 					Console.WriteLine( "parent object name "+parentObject.displayName);

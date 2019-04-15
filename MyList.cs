@@ -111,10 +111,8 @@ namespace Teltonika_Uzd {
 			foreach (MyList a in mainList) {
 				if (a.displayName == name) {
 					return mainList.IndexOf (a);
-					break;
 				} else { return a.relocateIndex (name); }
 			}
-
 			return -1;
 		}
 
