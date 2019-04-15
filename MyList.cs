@@ -80,22 +80,20 @@ namespace Teltonika_Uzd {
 				}
 			}
 		}
-		/* 	public MyList parentObject (string name) {
+		public MyList parentObject (string name) {
 			if (name == displayName) {
 				return parent;
 			} else {
 				foreach (MyList a in mainList) {
 					return a.parentObject (name);
 				}
-			}
+			} return null;
 		}
 		public int destinationIndex (string name) {
 			foreach (MyList a in mainList) {
 				if (a.displayName == name) {
 					return mainList.IndexOf (a);
-				} else
-
-				{
+				} else {
 					return a.destinationIndex (name);
 				}
 			}
@@ -118,8 +116,7 @@ namespace Teltonika_Uzd {
 			}
 
 			return -1;
-		}*/
-	
+		}
 
 	}
 }

@@ -104,7 +104,7 @@ namespace Teltonika_Uzd {
 				case "place":
 					int destIndex = -1;
 					int relocateIndex = -1;
-					/* 
+					 
 				foreach (MyList a in mainList)
 				{
 					parentObject= a.parentObject(parsedLine[1]);
@@ -119,9 +119,13 @@ namespace Teltonika_Uzd {
 					Console.WriteLine( "reLocate index "+relocateIndex);
 					init (Console.ReadLine ());
 				}else{Console.WriteLine("Indexes not found");
+					Console.WriteLine( "parent object name "+parentObject.displayName);
+					Console.WriteLine( "Destination index "+destIndex);
+					Console.WriteLine( "RElocationobject ame "+relocateObject.displayName);
+					Console.WriteLine( "reLocate index "+relocateIndex);
 					init (Console.ReadLine ());
 				}
-				*/
+				
 					printTree ();
 					init (Console.ReadLine ());
 					break;
