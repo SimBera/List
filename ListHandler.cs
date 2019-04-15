@@ -121,10 +121,11 @@ namespace Teltonika_Uzd {
 				}else{Console.WriteLine("Indexes not found");
 					init (Console.ReadLine ());
 				}
+				*/
 					printTree ();
 					init (Console.ReadLine ());
 					break;
-					*/
+					
 				default:
 					Console.WriteLine ("Ender Valid command");
 					Console.WriteLine ("For command list type ?");
