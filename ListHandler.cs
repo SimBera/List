@@ -9,8 +9,8 @@ namespace Teltonika_Uzd {
 	public class ListHandler {
 		List<MyList> mainList = new List<MyList> ();
 		public void init (string input) {
-			MyList parentObject=null;
-			MyList relocateObject=null;
+			MyList parentObject = null;
+			MyList relocateObject = null;
 			string consolieLine = input;
 			string[] parsedLine = consolieLine.Split (" ");
 			switch (parsedLine[0]) {
@@ -102,8 +102,9 @@ namespace Teltonika_Uzd {
 					init (Console.ReadLine ());
 					break;
 				case "place":
-				int destIndex =-1;
-				int relocateIndex = -1;
+					int destIndex = -1;
+					int relocateIndex = -1;
+					/* 
 				foreach (MyList a in mainList)
 				{
 					parentObject= a.parentObject(parsedLine[1]);
@@ -123,7 +124,7 @@ namespace Teltonika_Uzd {
 					printTree ();
 					init (Console.ReadLine ());
 					break;
-
+					*/
 				default:
 					Console.WriteLine ("Ender Valid command");
 					Console.WriteLine ("For command list type ?");

@@ -80,7 +80,7 @@ namespace Teltonika_Uzd {
 				}
 			}
 		}
-		public MyList parentObject (string name) {
+		/* 	public MyList parentObject (string name) {
 			if (name == displayName) {
 				return parent;
 			} else {
@@ -118,7 +118,8 @@ namespace Teltonika_Uzd {
 			}
 
 			return -1;
-		}
+		}*/
+	
 
 	}
 }
