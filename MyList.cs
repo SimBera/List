@@ -81,7 +81,7 @@ namespace Teltonika_Uzd {
 			}
 		}
 		public MyList parentObject (string name) {
-			if (name == displayName) {
+			if (string.Compare(displayName, name)==0) {
 				return parent;
 			} else {
 				foreach (MyList a in mainList) {
@@ -93,13 +93,13 @@ namespace Teltonika_Uzd {
 			return null;
 		}
 		public int destinationIndex (string name) {
-			int indexr =0;
+			int indexr = -3;
 			foreach (MyList a in mainList) {
-				if (a.displayName == name) {
-					indexr=mainList.IndexOf (a);
+				if (string.Compare(a.displayName, name)==0) {
+					indexr = mainList.IndexOf (a);
 					return mainList.IndexOf (a);
 				} else {
-					if (indexr > 0) { return indexr; } else {
+					if (indexr > -1) { return indexr; } else {
 						return a.destinationIndex (name);
 					}
 				}
@@ -108,10 +108,12 @@ namespace Teltonika_Uzd {
 		}
 		public MyList relocate (string name) {
 			foreach (MyList a in mainList) {
-				if (a.displayName == name) {
+				if (string.Compare(a.displayName, name)==0) {
 					return a;
 				} else {
-					if (a != null) { return a; } else {
+					if (a != null) {
+						return a;
+					} else {
 						return a.relocate (name);
 					}
 				}
@@ -119,15 +121,14 @@ namespace Teltonika_Uzd {
 			return null;
 		}
 		public int relocateIndex (string name) {
-			int indexr =0;
+			int indexr = -3;
 			foreach (MyList a in mainList) {
-				if (a.displayName == name) {
-					 indexr=mainList.IndexOf (a);
+				if (string.Compare(a.displayName, name)==0) {
+					indexr = mainList.IndexOf (a);
 					return mainList.IndexOf (a);
 				} else {
-					if (indexr>0) 
-					{ 
-						return indexr; 
+					if (indexr > -1) {
+						return indexr;
 
 					} else {
 						return a.relocateIndex (name);
