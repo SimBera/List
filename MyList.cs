@@ -81,7 +81,7 @@ namespace Teltonika_Uzd {
 			}
 		}
 		public MyList parentObject (string name) {
-			if (string.Compare(displayName, name)==0) {
+			if (string.Equals(displayName, name)) {
 				return parent;
 			} else {
 				foreach (MyList a in mainList) {
@@ -95,7 +95,7 @@ namespace Teltonika_Uzd {
 		public int destinationIndex (string name) {
 			int indexr = -3;
 			foreach (MyList a in mainList) {
-				if (string.Compare(a.displayName, name)==0) {
+				if (string.Equals(a.displayName, name)) {
 					indexr = mainList.IndexOf (a);
 					return mainList.IndexOf (a);
 				} else {
@@ -108,7 +108,7 @@ namespace Teltonika_Uzd {
 		}
 		public MyList relocate (string name) {
 			foreach (MyList a in mainList) {
-				if (string.Compare(a.displayName, name)==0) {
+				if (string.Equals(a.displayName, name)) {
 					return a;
 				} else {
 					if (a != null) {
@@ -123,7 +123,7 @@ namespace Teltonika_Uzd {
 		public int relocateIndex (string name) {
 			int indexr = -3;
 			foreach (MyList a in mainList) {
-				if (string.Compare(a.displayName, name)==0) {
+				if (string.Equals(a.displayName, name)) {
 					indexr = mainList.IndexOf (a);
 					return mainList.IndexOf (a);
 				} else {
@@ -138,5 +138,22 @@ namespace Teltonika_Uzd {
 			return -1;
 		}
 
+		        public bool IsPrime(int candidate) 
+        { 
+            if (candidate < 2) 
+            { 
+                return false; 
+            }
+
+            for (var divisor = 2; divisor <= Math.Sqrt(candidate); divisor++) 
+            { 
+                if (candidate % divisor == 0) 
+                { 
+                    return false; 
+                } 
+            } 
+            return true;  
+        } 
+    }
+
 	}
-}
