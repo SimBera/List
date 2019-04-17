@@ -1,0 +1,17 @@
+C:\Users\berankis.si\dotNet\Teltonika_Uzd\Teltonika_Uzd.Tests\obj\Debug\netcoreapp2.2\Teltonika_Uzd.Tests.csprojAssemblyReference.cache
+C:\Users\berankis.si\dotNet\Teltonika_Uzd\Teltonika_Uzd.Tests\obj\Debug\netcoreapp2.2\Teltonika_Uzd.Tests.csproj.CoreCompileInputs.cache
+C:\Users\berankis.si\dotNet\Teltonika_Uzd\Teltonika_Uzd.Tests\obj\Debug\netcoreapp2.2\Teltonika_Uzd.Tests.AssemblyInfoInputs.cache
+C:\Users\berankis.si\dotNet\Teltonika_Uzd\Teltonika_Uzd.Tests\obj\Debug\netcoreapp2.2\Teltonika_Uzd.Tests.AssemblyInfo.cs
+C:\Users\berankis.si\dotNet\Teltonika_Uzd\Teltonika_Uzd.Tests\bin\Debug\netcoreapp2.2\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\berankis.si\dotNet\Teltonika_Uzd\Teltonika_Uzd.Tests\bin\Debug\netcoreapp2.2\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\berankis.si\dotNet\Teltonika_Uzd\Teltonika_Uzd.Tests\bin\Debug\netcoreapp2.2\xunit.runner.utility.netcoreapp10.dll
+C:\Users\berankis.si\dotNet\Teltonika_Uzd\Teltonika_Uzd.Tests\bin\Debug\netcoreapp2.2\Teltonika_Uzd.Tests.deps.json
+C:\Users\berankis.si\dotNet\Teltonika_Uzd\Teltonika_Uzd.Tests\bin\Debug\netcoreapp2.2\Teltonika_Uzd.Tests.runtimeconfig.json
+C:\Users\berankis.si\dotNet\Teltonika_Uzd\Teltonika_Uzd.Tests\bin\Debug\netcoreapp2.2\Teltonika_Uzd.Tests.runtimeconfig.dev.json
+C:\Users\berankis.si\dotNet\Teltonika_Uzd\Teltonika_Uzd.Tests\bin\Debug\netcoreapp2.2\Teltonika_Uzd.Tests.dll
+C:\Users\berankis.si\dotNet\Teltonika_Uzd\Teltonika_Uzd.Tests\bin\Debug\netcoreapp2.2\Teltonika_Uzd.Tests.pdb
+C:\Users\berankis.si\dotNet\Teltonika_Uzd\Teltonika_Uzd.Tests\bin\Debug\netcoreapp2.2\Teltonika_Uzd.dll
+C:\Users\berankis.si\dotNet\Teltonika_Uzd\Teltonika_Uzd.Tests\bin\Debug\netcoreapp2.2\Teltonika_Uzd.pdb
+C:\Users\berankis.si\dotNet\Teltonika_Uzd\Teltonika_Uzd.Tests\obj\Debug\netcoreapp2.2\Teltonika_Uzd.Tests.csproj.CopyComplete
+C:\Users\berankis.si\dotNet\Teltonika_Uzd\Teltonika_Uzd.Tests\obj\Debug\netcoreapp2.2\Teltonika_Uzd.Tests.dll
+C:\Users\berankis.si\dotNet\Teltonika_Uzd\Teltonika_Uzd.Tests\obj\Debug\netcoreapp2.2\Teltonika_Uzd.Tests.pdb

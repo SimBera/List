@@ -1,0 +1,136 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\Teltonika_Uzd.Tests\\Teltonika_Uzd.Tests.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\Main\\Teltonika_Uzd.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\Main\\Teltonika_Uzd.csproj",
+        "projectName": "Teltonika_Uzd",
+        "projectPath": "C:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\Main\\Teltonika_Uzd.csproj",
+        "packagesPath": "C:\\Users\\berankis.si\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\Main\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\berankis.si\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.0.1, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\Teltonika_Uzd.Tests\\Teltonika_Uzd.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\Teltonika_Uzd.Tests\\Teltonika_Uzd.Tests.csproj",
+        "projectName": "Teltonika_Uzd.Tests",
+        "projectPath": "C:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\Teltonika_Uzd.Tests\\Teltonika_Uzd.Tests.csproj",
+        "packagesPath": "C:\\Users\\berankis.si\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\Teltonika_Uzd.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\berankis.si\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\Main\\Teltonika_Uzd.csproj": {
+                "projectPath": "C:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\Main\\Teltonika_Uzd.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.0.1, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
