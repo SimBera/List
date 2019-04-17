@@ -8,5 +8,7 @@ using System;
 using System.Reflection;
 
 
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 

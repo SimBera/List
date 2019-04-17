@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\PrimeService\\PrimeService.csproj": {}
+    "C:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\PrimeService\\PrimeService.csproj": {}
   },
   "projects": {
-    "c:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\PrimeService\\PrimeService.csproj": {
+    "C:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\PrimeService\\PrimeService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\PrimeService\\PrimeService.csproj",
+        "projectUniqueName": "C:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\PrimeService\\PrimeService.csproj",
         "projectName": "PrimeService",
-        "projectPath": "c:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\PrimeService\\PrimeService.csproj",
+        "projectPath": "C:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\PrimeService\\PrimeService.csproj",
         "packagesPath": "C:\\Users\\berankis.si\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\PrimeService\\obj\\",
+        "outputPath": "C:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\PrimeService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
