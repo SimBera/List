@@ -3,10 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeService", "PrimeService\PrimeService.csproj", "{06E68354-DDC1-4498-B9F6-41835D57A373}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeService.Tests", "PrimeService.Tests\PrimeService.Tests.csproj", "{200FAA9C-09A1-4180-A471-DD964C39D690}"
-EndProject
+
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teltonika_Uzd.Tests", "Teltonika_Uzd.Tests\Teltonika_Uzd.Tests.csproj", "{48D4B8BE-5C86-4F2A-8F86-714D402FEA72}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teltonika_Uzd", "Main\Teltonika_Uzd.csproj", "{0356F041-C0A1-451A-A6B2-B669EFE05C1C}"

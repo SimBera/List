@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\Teltonika_Uzd.Tests\\Teltonika_Uzd.Tests.csproj": {}
+    "C:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\Teltonika_Uzd.Tests\\Teltonika_Uzd.Tests.csproj": {}
   },
   "projects": {
-    "c:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\Main\\Teltonika_Uzd.csproj": {
+    "C:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\Main\\Teltonika_Uzd.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\Main\\Teltonika_Uzd.csproj",
+        "projectUniqueName": "C:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\Main\\Teltonika_Uzd.csproj",
         "projectName": "Teltonika_Uzd",
-        "projectPath": "c:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\Main\\Teltonika_Uzd.csproj",
+        "projectPath": "C:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\Main\\Teltonika_Uzd.csproj",
         "packagesPath": "C:\\Users\\berankis.si\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\Main\\obj\\",
+        "outputPath": "C:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\Main\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -66,14 +66,14 @@
         }
       }
     },
-    "c:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\Teltonika_Uzd.Tests\\Teltonika_Uzd.Tests.csproj": {
+    "C:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\Teltonika_Uzd.Tests\\Teltonika_Uzd.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\Teltonika_Uzd.Tests\\Teltonika_Uzd.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\Teltonika_Uzd.Tests\\Teltonika_Uzd.Tests.csproj",
         "projectName": "Teltonika_Uzd.Tests",
-        "projectPath": "c:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\Teltonika_Uzd.Tests\\Teltonika_Uzd.Tests.csproj",
+        "projectPath": "C:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\Teltonika_Uzd.Tests\\Teltonika_Uzd.Tests.csproj",
         "packagesPath": "C:\\Users\\berankis.si\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\Teltonika_Uzd.Tests\\obj\\",
+        "outputPath": "C:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\Teltonika_Uzd.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -90,8 +90,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "c:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\Main\\Teltonika_Uzd.csproj": {
-                "projectPath": "c:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\Main\\Teltonika_Uzd.csproj"
+              "C:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\Main\\Teltonika_Uzd.csproj": {
+                "projectPath": "C:\\Users\\berankis.si\\dotNet\\Teltonika_Uzd\\Main\\Teltonika_Uzd.csproj"
               }
             }
           }
