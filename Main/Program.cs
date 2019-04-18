@@ -12,7 +12,7 @@ namespace Teltonika_Uzd
         static void Main(string[] args)
         {
 			Console.WriteLine("Enter a command");
-            List<MyList> list = new List<MyList>();
+            //List<MyList> list = new List<MyList>();
             ListHandler handler = new ListHandler();
 			handler.init(Console.ReadLine());
             Console.ReadKey();
