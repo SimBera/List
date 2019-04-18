@@ -85,7 +85,6 @@ namespace Teltonika_Uzd {
 			MyList parentObject = null;
 			MyList relocateObject = null;
 			foreach (MyList a in mainList) {
-
 				if (parentObject == null) {
 					parentObject = a.parentObject (parsedLine1);
 				}

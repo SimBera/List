@@ -152,16 +152,15 @@ namespace Prime.UnitTests.Services {
                 addedItem = mainList1.mainList[1].mainList[3].parent.displayName;
                 result1 = firstItem.Equals (addedItem);
                 Assert.True (result1, $"{firstItem} == {addedItem} ?? list2 Parent");
-
             }
-
             [Fact]
-            public void Init_Test () {
-                ListHandler lh= new ListHandler();
-                lh.init("add main list1")
-                Assert.True (result1, $"{firstItem} == {addedItem} ?? list2 Parent");
+            public void ParsTest () {
+                ListHandler lh = new ListHandler();
+                string toParse = "main list1 l1";
+                string [] parsed = lh.parse(toParse);
+                bool result= parsed[1].Equals("list1");
+               Assert.True (result, $"{parsed[1]} == list1 ");
             }
                 #endregion
-
             }
         }
