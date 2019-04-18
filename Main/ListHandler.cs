@@ -9,10 +9,14 @@ namespace Teltonika_Uzd {
 	public class ListHandler {
 		List<MyList> mainList = new List<MyList> ();
 		public void init (string input) {
-			MyList parentObject = null;
-			MyList relocateObject = null;
-			string consolieLine = input;
-			string[] parsedLine = consolieLine.Split (" ");
+			parsedLine = parse(input);
+			Switcher (parsedLine);
+		}
+		public string parse (string input) {
+			string[] parsedLine = input.Split (" ");
+			return parsedLine;
+		}
+		public void Switcher (string[] parstedLine) {
 			switch (parsedLine[0]) {
 				case "add": // add <listName>(main adds to main list) <addString>
 					AddNewItem (mainList, parsedLine[1], parsedLine[2]);
@@ -69,19 +73,21 @@ namespace Teltonika_Uzd {
 		public void Place (List<MyList> mainList, string parsedLine1, string parsedLine2) {
 			int destIndex = -1;
 			int relocateIndex = -1;
+			MyList parentObject = null;
+			MyList relocateObject = null;
 			foreach (MyList a in mainList) {
 
 				if (parentObject == null) {
-					parentObject = a.parentObject (parsedLine[1]);
+					parentObject = a.parentObject (parsedLine1);
 				}
 				if (destIndex == -1) {
-					destIndex = a.destinationIndex (parsedLine[1]);
+					destIndex = a.destinationIndex (parsedLine1);
 				}
 				if (relocateObject == null) {
-					relocateObject = a.relocate (parsedLine[2]);
+					relocateObject = a.relocate (parsedLine2);
 				}
 				if (relocateIndex == -1) {
-					relocateIndex = a.relocateIndex (parsedLine[2]);
+					relocateIndex = a.relocateIndex (parsedLine2);
 				}
 			}
 			if (destIndex > 0 && relocateIndex > 0) {
