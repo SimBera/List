@@ -8,8 +8,29 @@ using System.Threading.Tasks;
 namespace Teltonika_Uzd {
 	public class ListHandler {
 		List<MyList> mainList = new List<MyList> ();
+		public void generateData () {
+			//Generae tst data
+			MyList list1 = new MyList { displayName = "List1" };
+			MyList list2 = new MyList { displayName = "List2" };
+			MyList list3 = new MyList { displayName = "List3" };
+			MyList list4 = new MyList { displayName = "List4" };
+			MyList subList1 = new MyList { displayName = "SubList1" };
+			MyList subList2 = new MyList { displayName = "SubList2" };
+			MyList subList3 = new MyList { displayName = "SubList3" };
+			MyList subList4 = new MyList { displayName = "SubList4" };
+			//Adding Items
+			list1.addItem (list1.displayName, list2.displayName, list1);
+			list1.addItem (list1.displayName, list3.displayName, list1);
+			list1.addItem (list1.displayName, list4.displayName, list1);
+			list1.addItem (list2.displayName, subList1.displayName, list2);
+			list1.addItem (list2.displayName, subList2.displayName, list2);
+			list1.addItem (list2.displayName, subList3.displayName, list2);
+			list1.addItem (list2.displayName, subList4.displayName, list2);
+			mainList.Add (list1);
+		}
+		//Generate tst data end
 		public void init (string input) {
-			string[] parsedLine = parse(input);
+			string[] parsedLine = parse (input);
 			Switcher (parsedLine);
 		}
 		public string[] parse (string input) {
@@ -92,26 +113,14 @@ namespace Teltonika_Uzd {
 					destIndex = a.destinationIndex (parsedLine1);
 				}
 				if (relocateObject == null) {
-					relocateObject = a.relocate (parsedLine2);
+					relocateObject = a.relocate (parsedLine2, null);
 				}
 				if (relocateIndex == -1) {
 					relocateIndex = a.relocateIndex (parsedLine2);
 				}
 			}
-			if (destIndex > 0 && relocateIndex > 0) {
-				Console.WriteLine ("parent object name " + parentObject.displayName);
-				Console.WriteLine ("Destination index " + destIndex);
-				Console.WriteLine ("RElocationobject ame " + relocateObject.displayName);
-				Console.WriteLine ("reLocate index " + relocateIndex);
-				init (Console.ReadLine ());
-			} else {
-				Console.WriteLine ("Indexes not found");
-				Console.WriteLine ("parent object name " + parentObject.displayName);
-				Console.WriteLine ("Destination index " + destIndex);
-				Console.WriteLine ("RElocationobject ame " + relocateObject.displayName);
-				Console.WriteLine ("reLocate index " + relocateIndex);
-				init (Console.ReadLine ());
-			}
+			parentObject.mainList.Insert (destIndex, relocateObject);
+			relocateObject.parent.mainList.Remove (relocateObject);
 		}
 		public void Help () {
 			Console.WriteLine ("add <parentListName>(default 'main') <newListName> - creates an new item in the list");

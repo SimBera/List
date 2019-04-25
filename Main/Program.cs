@@ -14,6 +14,7 @@ namespace Teltonika_Uzd
 			Console.WriteLine("Enter a command");
             //List<MyList> list = new List<MyList>();
             ListHandler handler = new ListHandler();
+            handler.generateData();
 			handler.init(Console.ReadLine());
             Console.ReadKey();
         }

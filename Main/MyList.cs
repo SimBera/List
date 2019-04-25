@@ -30,6 +30,7 @@ namespace Teltonika_Uzd {
 				Console.WriteLine ("Parent list: " + parent.displayName);
 				Console.WriteLine ("Level: " + level);
 				Console.WriteLine ("Items in the list:");
+				Console.WriteLine ("------------------------------------------");
 				foreach (MyList a in mainList) {
 					Console.WriteLine ("  " + a.displayName);
 				}
@@ -40,7 +41,6 @@ namespace Teltonika_Uzd {
 			}
 		}
 		public void delete (string name) {
-
 			mainList.RemoveAll (x => x.displayName == name);
 			foreach (MyList a in mainList) {
 				a.delete (name);
@@ -81,7 +81,7 @@ namespace Teltonika_Uzd {
 			}
 		}
 		public MyList parentObject (string name) {
-			if (string.Equals(displayName, name)) {
+			if (string.Equals (displayName, name)) {
 				return parent;
 			} else {
 				foreach (MyList a in mainList) {
@@ -95,65 +95,41 @@ namespace Teltonika_Uzd {
 		public int destinationIndex (string name) {
 			int indexr = -3;
 			foreach (MyList a in mainList) {
-				if (string.Equals(a.displayName, name)) {
+				if (string.Equals (a.displayName, name)) {
 					indexr = mainList.IndexOf (a);
-					return mainList.IndexOf (a);
-				} else {
-					if (indexr > -1) { return indexr; } else {
-						return a.destinationIndex (name);
-					}
+					return indexr;
 				}
 			}
-			return -1;
-		}
-		public MyList relocate (string name) {
 			foreach (MyList a in mainList) {
-				if (string.Equals(a.displayName, name)) {
-					return a;
-				} else {
-					if (a != null) {
-						return a;
-					} else {
-						return a.relocate (name);
-					}
+				return a.destinationIndex (name);
+			}
+			return indexr;
+		}
+		public MyList relocate (string name, MyList reloc) {
+			foreach (MyList a in mainList) {
+				if (name.Equals (a.displayName)) {
+					reloc = a;
+					return reloc;
 				}
 			}
-			return null;
+			foreach (MyList a in mainList) {
+				return a.relocate (name, reloc);
+			}
+			return reloc;
 		}
 		public int relocateIndex (string name) {
 			int indexr = -3;
-			foreach (MyList a in mainList) {
-				if (string.Equals(a.displayName, name)) {
-					indexr = mainList.IndexOf (a);
-					return mainList.IndexOf (a);
-				} else {
-					if (indexr > -1) {
-						return indexr;
 
-					} else {
-						return a.relocateIndex (name);
-					}
+			foreach (MyList a in mainList) {
+				if (string.Equals (a.displayName, name)) {
+					indexr = mainList.IndexOf (a);
+					return indexr;
 				}
 			}
-			return -1;
+			foreach (MyList a in mainList) {
+				return a.relocateIndex (name);
+			}
+			return indexr;
 		}
-
-		        public bool IsPrime(int candidate) 
-        { 
-            if (candidate < 2) 
-            { 
-                return false; 
-            }
-
-            for (var divisor = 2; divisor <= Math.Sqrt(candidate); divisor++) 
-            { 
-                if (candidate % divisor == 0) 
-                { 
-                    return false; 
-                } 
-            } 
-            return true;  
-        } 
-    }
-
 	}
+}
