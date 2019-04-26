@@ -11,22 +11,16 @@ namespace Teltonika_Uzd {
 		public void generateData () {
 			//Generae tst data
 			MyList list1 = new MyList { displayName = "List1" };
-			MyList list2 = new MyList { displayName = "List2" };
-			MyList list3 = new MyList { displayName = "List3" };
-			MyList list4 = new MyList { displayName = "List4" };
-			MyList subList1 = new MyList { displayName = "SubList1" };
-			MyList subList2 = new MyList { displayName = "SubList2" };
-			MyList subList3 = new MyList { displayName = "SubList3" };
-			MyList subList4 = new MyList { displayName = "SubList4" };
 			//Adding Items
-			list1.addItem (list1.displayName, list2.displayName, list1);
-			list1.addItem (list1.displayName, list3.displayName, list1);
-			list1.addItem (list1.displayName, list4.displayName, list1);
-			list1.addItem (list2.displayName, subList1.displayName, list2);
-			list1.addItem (list2.displayName, subList2.displayName, list2);
-			list1.addItem (list2.displayName, subList3.displayName, list2);
-			list1.addItem (list2.displayName, subList4.displayName, list2);
 			mainList.Add (list1);
+			MyList list2 = mainList.Find (x => x.displayName.Equals ("List2"));
+			list1.addItem ("List1", "List2", list1);
+			list1.addItem ("List1", "List3", list1);
+			list1.addItem ("List1", "List4", list1);
+			list1.addItem ("List2", "SubList1", list2);
+			list1.addItem ("List2", "SubList2", list2);
+			list1.addItem ("List2", "SubList3", list2);
+			list1.addItem ("List2", "SubList4", list2);
 		}
 		//Generate tst data end
 		public void init (string input) {
@@ -109,20 +103,28 @@ namespace Teltonika_Uzd {
 				if (parentObject == null) {
 					parentObject = a.parentObject (parsedLine1);
 				}
-				
+
 				if (relocateObject == null) {
 					relocateObject = a.relocate (parsedLine1, null);
 				}
 				if (relocateIndex == -1) {
-					relocateIndex = a.relocateIndex (parsedLine2,-3);
+					relocateIndex = a.relocateIndex (parsedLine2, -3);
 				}
 				//if (deletionIndex == -1) {
 				//			deletionIndex = a.deletionIndex (parsedLine1, -3);
 				//}
 			}
-			
-			parentObject.mainList.Insert (relocateIndex, relocateObject);
-		//	relocateObject.parent.mainList.Remove (relocateObject);
+			if (parentObject != null || relocateObject != null || relocateIndex > 0) {
+				relocateObject.parent.mainList.Remove (relocateObject);
+				parentObject.mainList.Insert (relocateIndex, relocateObject);
+
+			} else { Console.WriteLine ("Objects not found"); }
+
+			deletionIndex = -1;
+			relocateIndex = -1;
+			parentObject = null;
+			relocateObject = null;
+			//	relocateObject.parent.mainList.Remove (relocateObject);
 		}
 		public void Help () {
 			Console.WriteLine ("add <parentListName>(default 'main') <newListName> - creates an new item in the list");
@@ -177,6 +179,11 @@ namespace Teltonika_Uzd {
 					break;
 				case "place":
 					Place (mainList, parsedLine[1], parsedLine[2]);
+					printTree ();
+					init (Console.ReadLine ());
+					break;
+				case "gener":
+					generateData ();
 					printTree ();
 					init (Console.ReadLine ());
 					break;
