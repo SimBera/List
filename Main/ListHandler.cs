@@ -101,7 +101,7 @@ namespace Teltonika_Uzd {
 			}
 		}
 		public void Place (List<MyList> mainList, string parsedLine1, string parsedLine2) {
-			int destIndex = -1;
+			int deletionIndex = -1;
 			int relocateIndex = -1;
 			MyList parentObject = null;
 			MyList relocateObject = null;
@@ -109,18 +109,20 @@ namespace Teltonika_Uzd {
 				if (parentObject == null) {
 					parentObject = a.parentObject (parsedLine1);
 				}
-				if (destIndex == -1) {
-					destIndex = a.destinationIndex (parsedLine1);
-				}
+				
 				if (relocateObject == null) {
-					relocateObject = a.relocate (parsedLine2, null);
+					relocateObject = a.relocate (parsedLine1, null);
 				}
 				if (relocateIndex == -1) {
-					relocateIndex = a.relocateIndex (parsedLine2);
+					relocateIndex = a.relocateIndex (parsedLine2,-3);
 				}
+				//if (deletionIndex == -1) {
+				//			deletionIndex = a.deletionIndex (parsedLine1, -3);
+				//}
 			}
-			parentObject.mainList.Insert (destIndex, relocateObject);
-			relocateObject.parent.mainList.Remove (relocateObject);
+			
+			parentObject.mainList.Insert (relocateIndex, relocateObject);
+		//	relocateObject.parent.mainList.Remove (relocateObject);
 		}
 		public void Help () {
 			Console.WriteLine ("add <parentListName>(default 'main') <newListName> - creates an new item in the list");

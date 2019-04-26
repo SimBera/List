@@ -92,8 +92,7 @@ namespace Teltonika_Uzd {
 			}
 			return null;
 		}
-		public int destinationIndex (string name) {
-			int indexr = -3;
+		public int deletionIndex (string name, int indexr) {
 			foreach (MyList a in mainList) {
 				if (string.Equals (a.displayName, name)) {
 					indexr = mainList.IndexOf (a);
@@ -101,7 +100,7 @@ namespace Teltonika_Uzd {
 				}
 			}
 			foreach (MyList a in mainList) {
-				return a.destinationIndex (name);
+				return a.deletionIndex (name, indexr);
 			}
 			return indexr;
 		}
@@ -117,9 +116,7 @@ namespace Teltonika_Uzd {
 			}
 			return reloc;
 		}
-		public int relocateIndex (string name) {
-			int indexr = -3;
-
+		public int relocateIndex (string name, int indexr) {
 			foreach (MyList a in mainList) {
 				if (string.Equals (a.displayName, name)) {
 					indexr = mainList.IndexOf (a);
@@ -127,7 +124,7 @@ namespace Teltonika_Uzd {
 				}
 			}
 			foreach (MyList a in mainList) {
-				return a.relocateIndex (name);
+				return a.relocateIndex (name, indexr);
 			}
 			return indexr;
 		}
