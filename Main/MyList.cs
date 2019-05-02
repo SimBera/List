@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Teltonika_Uzd {
 	public class MyList {
+
 		public List<MyList> mainList = new List<MyList> ();
 		public string displayName { get; set; }
 		public MyList parent { get; set; }
@@ -80,17 +81,19 @@ namespace Teltonika_Uzd {
 				}
 			}
 		}
-		public MyList parentObject (string name) {
+		public MyList parentObject (string name, MyList parentObjectLocal) {
+
 			if (string.Equals (displayName, name)) {
-				return parent;
+				parentObjectLocal = parent;
+				return parentObjectLocal;
 			} else {
 				foreach (MyList a in mainList) {
-					if (a != null) { return a; } else {
-						return a.parentObject (name);
+					if (parentObjectLocal != null) { return parentObjectLocal; } else {
+						if (a != null) { return a.parentObject (name, parentObjectLocal); } else { return parentObjectLocal; }
 					}
 				}
 			}
-			return null;
+			return parentObjectLocal;
 		}
 		public int deletionIndex (string name, int indexr) {
 			foreach (MyList a in mainList) {

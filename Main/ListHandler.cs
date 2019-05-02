@@ -101,7 +101,7 @@ namespace Teltonika_Uzd {
 			MyList relocateObject = null;
 			foreach (MyList a in mainList) {
 				if (parentObject == null) {
-					parentObject = a.parentObject (parsedLine1);
+					parentObject = a.parentObject (parsedLine1,null);
 				}
 
 				if (relocateObject == null) {
@@ -133,6 +133,7 @@ namespace Teltonika_Uzd {
 			Console.WriteLine ("sortup <listName> - sorts the list up alphabetically");
 			Console.WriteLine ("sortdown <listName> - sorts the list down alphabetically");
 			Console.WriteLine ("place <listName> <destination listName> - plases firt list to second list's place");
+			Console.WriteLine ("gener - generates sample tree");
 			Console.WriteLine ("tree - prints a List tree");
 		}
 		public void Switcher (string[] parsedLine) {
